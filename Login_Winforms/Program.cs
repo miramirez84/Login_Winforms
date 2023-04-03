@@ -18,9 +18,7 @@ namespace Login_Winforms
 			DialogResult result = frmLogin.ShowDialog();
 			
 			if (result == DialogResult.OK)
-			{				
-				Application.Run(new frmMenuPrincipal());
-			}
+				Application.Run(new frmMenuPrincipal());			
 		}
 	}
 }
