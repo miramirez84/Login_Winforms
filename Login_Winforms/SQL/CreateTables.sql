@@ -1,0 +1,45 @@
+USE [LoginDB]
+GO
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 03/04/2023 20:57:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Usuarios](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Usuario] [varchar](50) NULL,
+	[Password] [varbinary](256) NULL,
+ CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [IX_Usuarios_UsuarioPassword] UNIQUE NONCLUSTERED 
+(
+	[Usuario] ASC,
+	[Password] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  StoredProcedure [dbo].[spLogin]    Script Date: 03/04/2023 20:57:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[spLogin] 
+	-- Add the parameters for the stored procedure here
+	@USUARIO VARCHAR(50) ,
+	@PASSWORD VARCHAR(50) 
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	DECLARE @HASH AS VARBINARY(256)
+	
+	SET @HASH = HASHBYTES('SHA2_256',@PASSWORD)
+    
+	SELECT COUNT(*) FROM Usuarios WHERE Usuario=@USUARIO AND Password = @HASH
+		
+
+END
+GO
