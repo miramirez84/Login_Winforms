@@ -35,6 +35,7 @@
 			txtPassword = new TextBox();
 			btnCancelar = new Button();
 			btnAceptar = new Button();
+			label1 = new Label();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
@@ -109,6 +110,16 @@
 			btnAceptar.UseVisualStyleBackColor = true;
 			btnAceptar.Click += btnAceptar_Click;
 			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Location = new Point(293, 9);
+			label1.Margin = new Padding(4, 0, 4, 0);
+			label1.Name = "label1";
+			label1.Size = new Size(69, 20);
+			label1.TabIndex = 1;
+			label1.Text = "Cliente A";
+			// 
 			// frmLogin
 			// 
 			AcceptButton = btnAceptar;
@@ -122,6 +133,7 @@
 			Controls.Add(txtPassword);
 			Controls.Add(txtUsuario);
 			Controls.Add(lblPassword);
+			Controls.Add(label1);
 			Controls.Add(lblUsuario);
 			Controls.Add(pictureBox1);
 			Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
@@ -146,5 +158,6 @@
 		private TextBox txtPassword;
 		private Button btnCancelar;
 		private Button btnAceptar;
+		private Label label1;
 	}
 }
