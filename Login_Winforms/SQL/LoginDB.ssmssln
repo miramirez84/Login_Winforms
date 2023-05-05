@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 19.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modificaciones", "Modificaciones", "{428BA5E1-CB73-4980-BF64-A572144FEA4E}"
+	ProjectSection(SolutionItems) = preProject
+		001-Alter Procedure dbo.spLogin.sql = 001-Alter Procedure dbo.spLogin.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED66D66B-0829-4517-8182-7B90FF78B27D}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {102546E6-F6EB-4942-A8C8-06B59F0A491E}
+	EndGlobalSection
+EndGlobal
