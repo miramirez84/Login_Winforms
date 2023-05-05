@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login_Winforms.Manager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Login_Winforms
 		public frmMenuPrincipal()
 		{
 			InitializeComponent();
+			ServerDateToolStripStatusLabel.Text = Utils.GetServerDate().ToShortDateString();
 		}
 
 		private void salirToolStripMenuItem_Click(object sender, EventArgs e)

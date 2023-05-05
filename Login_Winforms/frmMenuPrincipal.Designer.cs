@@ -28,20 +28,24 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			menuStrip1 = new MenuStrip();
+			PrincipalMenuStrip = new MenuStrip();
 			sistemaToolStripMenuItem = new ToolStripMenuItem();
 			salirToolStripMenuItem = new ToolStripMenuItem();
-			menuStrip1.SuspendLayout();
+			PrincipalStatusStrip = new StatusStrip();
+			ServerDateToolStripStatusLabel = new ToolStripStatusLabel();
+			StatusToolStripStatusLabel = new ToolStripStatusLabel();
+			PrincipalMenuStrip.SuspendLayout();
+			PrincipalStatusStrip.SuspendLayout();
 			SuspendLayout();
 			// 
-			// menuStrip1
+			// PrincipalMenuStrip
 			// 
-			menuStrip1.Items.AddRange(new ToolStripItem[] { sistemaToolStripMenuItem });
-			menuStrip1.Location = new Point(0, 0);
-			menuStrip1.Name = "menuStrip1";
-			menuStrip1.Size = new Size(800, 24);
-			menuStrip1.TabIndex = 1;
-			menuStrip1.Text = "menuStrip1";
+			PrincipalMenuStrip.Items.AddRange(new ToolStripItem[] { sistemaToolStripMenuItem });
+			PrincipalMenuStrip.Location = new Point(0, 0);
+			PrincipalMenuStrip.Name = "PrincipalMenuStrip";
+			PrincipalMenuStrip.Size = new Size(800, 24);
+			PrincipalMenuStrip.TabIndex = 1;
+			PrincipalMenuStrip.Text = "menuStrip1";
 			// 
 			// sistemaToolStripMenuItem
 			// 
@@ -53,32 +57,61 @@
 			// salirToolStripMenuItem
 			// 
 			salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-			salirToolStripMenuItem.Size = new Size(180, 22);
+			salirToolStripMenuItem.Size = new Size(96, 22);
 			salirToolStripMenuItem.Text = "Sali&r";
 			salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
+			// 
+			// PrincipalStatusStrip
+			// 
+			PrincipalStatusStrip.Items.AddRange(new ToolStripItem[] { StatusToolStripStatusLabel, ServerDateToolStripStatusLabel });
+			PrincipalStatusStrip.Location = new Point(0, 426);
+			PrincipalStatusStrip.Name = "PrincipalStatusStrip";
+			PrincipalStatusStrip.Size = new Size(800, 24);
+			PrincipalStatusStrip.TabIndex = 3;
+			PrincipalStatusStrip.Text = "statusStrip1";
+			// 
+			// ServerDateToolStripStatusLabel
+			// 
+			ServerDateToolStripStatusLabel.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+			ServerDateToolStripStatusLabel.Name = "ServerDateToolStripStatusLabel";
+			ServerDateToolStripStatusLabel.Size = new Size(88, 19);
+			ServerDateToolStripStatusLabel.Text = "{SERVER DATE}";
+			// 
+			// StatusToolStripStatusLabel
+			// 
+			StatusToolStripStatusLabel.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+			StatusToolStripStatusLabel.Name = "StatusToolStripStatusLabel";
+			StatusToolStripStatusLabel.Size = new Size(697, 19);
+			StatusToolStripStatusLabel.Spring = true;
 			// 
 			// frmMenuPrincipal
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(menuStrip1);
+			Controls.Add(PrincipalStatusStrip);
+			Controls.Add(PrincipalMenuStrip);
 			IsMdiContainer = true;
-			MainMenuStrip = menuStrip1;
+			MainMenuStrip = PrincipalMenuStrip;
 			Name = "frmMenuPrincipal";
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Menú Principal";
 			WindowState = FormWindowState.Maximized;
-			menuStrip1.ResumeLayout(false);
-			menuStrip1.PerformLayout();
+			PrincipalMenuStrip.ResumeLayout(false);
+			PrincipalMenuStrip.PerformLayout();
+			PrincipalStatusStrip.ResumeLayout(false);
+			PrincipalStatusStrip.PerformLayout();
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
 
-		private MenuStrip menuStrip1;
+		private MenuStrip PrincipalMenuStrip;
 		private ToolStripMenuItem sistemaToolStripMenuItem;
 		private ToolStripMenuItem salirToolStripMenuItem;
+		private StatusStrip PrincipalStatusStrip;
+		private ToolStripStatusLabel StatusToolStripStatusLabel;
+		private ToolStripStatusLabel ServerDateToolStripStatusLabel;
 	}
 }
