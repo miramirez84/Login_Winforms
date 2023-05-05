@@ -22,13 +22,5 @@ namespace Login_Winforms.Manager
 				return ServerDate;
 			}				
 		}
-		public static string GetClienteAToken()
-		{
-			return "TOKEN CLIENTE A";
-		}
-		public static string GetServerName()
-		{
-			return "SERVER NAME";
-		}
 	}
 }
