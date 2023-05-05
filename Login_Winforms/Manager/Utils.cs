@@ -26,5 +26,9 @@ namespace Login_Winforms.Manager
 		{
 			return "TOKEN CLIENTE A";
 		}
+		public static string GetServerName()
+		{
+			return "SERVER NAME";
+		}
 	}
 }
