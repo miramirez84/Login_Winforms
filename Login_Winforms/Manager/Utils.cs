@@ -21,10 +21,6 @@ namespace Login_Winforms.Manager
 				DateTime ServerDate = (DateTime)cmd.ExecuteScalar();
 				return ServerDate;
 			}				
-		}
-		public static string GetClienteToken()
-		{
-			return "TOKEN DEL CLIENTE";
-		}
+		}		
 	}
 }
