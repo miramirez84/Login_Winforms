@@ -54,6 +54,7 @@
 			// lblUsuario
 			// 
 			lblUsuario.AutoSize = true;
+			lblUsuario.ForeColor = Color.White;
 			lblUsuario.Location = new Point(192, 49);
 			lblUsuario.Margin = new Padding(4, 0, 4, 0);
 			lblUsuario.Name = "lblUsuario";
@@ -64,6 +65,7 @@
 			// lblPassword
 			// 
 			lblPassword.AutoSize = true;
+			lblPassword.ForeColor = Color.White;
 			lblPassword.Location = new Point(192, 102);
 			lblPassword.Margin = new Padding(4, 0, 4, 0);
 			lblPassword.Name = "lblPassword";
@@ -113,6 +115,7 @@
 			// label1
 			// 
 			label1.AutoSize = true;
+			label1.ForeColor = Color.White;
 			label1.Location = new Point(293, 9);
 			label1.Margin = new Padding(4, 0, 4, 0);
 			label1.Name = "label1";
@@ -125,7 +128,7 @@
 			AcceptButton = btnAceptar;
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.White;
+			BackColor = Color.SteelBlue;
 			CancelButton = btnCancelar;
 			ClientSize = new Size(461, 230);
 			Controls.Add(btnAceptar);
